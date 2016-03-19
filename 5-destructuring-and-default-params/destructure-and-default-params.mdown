@@ -1,0 +1,151 @@
+# Destructuring + Default Parameters
+### Level Up Your JavaScript with ES6
+#### by Cody Barrus & Ryan Ewing
+
+---
+## Destructuring
+### what?
+`let { villians, agents } = cast`
+
+---
+```javascript
+let { villians } = cast;
+
+//vs
+
+let villians = cast.villians;
+let agents = cast.agents;
+```
+
+---
+## Destructuring
+### why?
+
+* terse
+
+---
+## Destructuring
+### how?
+
+```javascript
+let { variables, on, the, left} = sourceOnTheRight;
+```
+
+---
+## Destructuring
+### choosing a different name
+
+```javascript
+
+let { nameInObject: nameYouWantInstead } = source;
+```
+
+---
+## Destructuring
+### choosing a different name
+
+```javascript
+//DrNoCast = {
+//  bond: "Sean Connery",
+//  drNo: "Joseph Wiseman"
+//}
+let { bond:doubleOh7, drNo: badGuy } = DrNoCast;
+console.log(doubleOh7, badGuy); // Sean Connery, Joseph Wiseman
+```
+
+---
+## Destructuring
+### default values
+
+```javascript
+let { key: defaultValue } = source;
+```
+
+---
+## Destructuring
+### default values
+
+```javascript
+let { bondGirl: 'mother' } = GoldfingerCast;
+```
+
+---
+## Destructuring
+### go deeper
+
+```javascript
+let { parentKey: childKey } = source;
+```
+
+---
+## Destructuring
+### go deeper
+
+```javascript
+// allFilms = { goldenEye: { bond: "Pierce Brosnan" } }
+let { goldenEye: { bond } } = allFilms;
+console.log(bond); // Pierce Brosnan
+```
+
+---
+## Destructuring
+### undefined
+
+```javascript
+// allFilms = { goldenEye: { bond: "Pierce Brosnan" } }
+let { silverEye } = allFilms;
+let { silverEye: { bond } } = allFilms;
+// Cannot read property 'bond' of undefined
+console.log(silverEye); // undefined
+
+```
+
+---
+## Destructuring
+### arrays!
+
+```javascript
+let [drNo, fromRussia] = [1962, 1963];
+
+```
+
+---
+## Default Parameters
+
+```javascript
+function announceBestBond(name="Sean Connery") {
+  console.log("The best bond ever was ", name);
+}
+announceBestBond();
+announceBestBond("Pierce Brosnan");
+```
+
+---
+## Destructure and Default Parameters
+
+```javascript
+function announceBest({agent="Sean Connery", villian="Goldfinger"}) {
+  console.log(`The best bond ever was ${agent} and the villan was ${villian}`);
+}
+announceBest({});
+announceBest({villian: "Oddjob"});
+// announceBest() // cannot read property 'agent' of undefined
+```
+
+---
+## Destructure and Default Parameters
+### default to empty object
+
+```javascript
+function announceBest({agent="Sean Connery", villian="Goldfinger"} = {}) {
+  console.log(`The best bond ever was ${agent} and the villan was ${villian}`);
+}
+announceBest();
+
+```
+
+---
+
+
+
+
