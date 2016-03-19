@@ -1,4 +1,4 @@
-## Let, Const, & Template Literals
+## Let & Const
 ### Level Up Your JavaScript with ES6
 #### by Cody Barrus & Ryan Ewing
 
