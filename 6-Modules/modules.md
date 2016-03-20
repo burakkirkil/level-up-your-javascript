@@ -76,6 +76,7 @@ If you want to rename a something when you export:
 
 - `export { bond as jamesBond}`
 - `export { bond as default }`
+
 ---
 
 # Limitations
@@ -94,7 +95,9 @@ Exports:
 - Place `export`s at the bottom of the file (makes discovering exports easy)
 - Bundle methods under export default (especially if you're used to CommonJS)
 
-ie
+---
+
+Example
 
 ```JavaScript
 var bondFacts = {
@@ -135,7 +138,11 @@ import gadgets from 'gadgets';
 # Import Named Exports
 
 ```JavaScript
-import { bagpipeFlamethrower, falseFingerprints, sharkInflatingPellet } from gadgets;
+import {
+  bagpipeFlamethrower,
+  falseFingerprints,
+  sharkInflatingPellet
+} from gadgets;
 ```
 
 ---
@@ -145,12 +152,14 @@ import { bagpipeFlamethrower, falseFingerprints, sharkInflatingPellet } from gad
 ```JavaScript
 import { ringCamera as justARing } from gadgets;
 ```
+---
 
 # Mix and Match
 
 ```JavaScript
 import gadgets, { watchGun as watch, broomRadio } from gadgets;
 ```
+---
 
 # Just give me everything!
 
