@@ -1,4 +1,4 @@
-# Modules
+# Classes
 ## Level Up Your JavaScript
 ### By Cody Barrus & Ryan Ewing
 
