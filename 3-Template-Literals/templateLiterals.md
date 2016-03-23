@@ -45,3 +45,16 @@ console.log(bondFilm);
 ```
 
 ---
+
+# More on Multiline
+
+- spacing does matter
+- wrap in parenthesis to keep away from variable declaration
+
+```JavaScript
+const bestBondSongs = (
+`Goldfinger
+Live and Let Die
+Nobody Does It Better
+`);
+```
