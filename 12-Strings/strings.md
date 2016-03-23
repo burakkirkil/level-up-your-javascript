@@ -77,10 +77,10 @@
 // ''
 
 'dun'.repeat(8)
-'dundundundundundundundun'
+// 'dundundundundundundundun'
 
 'dun'.repeat('8')
-'dundundundundundundundun'
+// 'dundundundundundundundun'
 
 ```
 
@@ -91,7 +91,7 @@
 ```JavaScript
 
 'dun'.repeat(8.4)
-'dundundundundundundundun' // floored to 8
+// 'dundundundundundundundun' // floored to 8
 
 'dun'.repeat(-1)
 // RangeError
