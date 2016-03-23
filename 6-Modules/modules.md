@@ -17,7 +17,7 @@
 
 When using the ES2015 module syntax, strict mode is turned on by default.  This means:
 
-- Variables can be undeclared
+- Variables cannot be undeclared
 - Function parameters mush have unique names
 - Reserved words cannot be bound
 
