@@ -11,6 +11,7 @@ const killBond = ({ weapon, villian }) => {
 };
 
 // Babel with Node.js (learn more at https://babeljs.io/docs/setup/#node)
+// https://babeljs.io/blog/2015/10/31/setting-up-babel-6
 
 // install babel-core (doesn't transform anything by default)
 // npm install --save-dev babel-core
@@ -23,7 +24,7 @@ require("babel-core").transform("code", options);
 let bondWeapons = ['flame thrower watch', 'shoe dagger'];
 let secretAgentArsenal = ['poisen darts', ...bondWeapons];
 
-// Built in Babel for recent verstions of Chrome, Edge, Firefox, etc
+// Built in for recent versions of Chrome, Edge, Firefox, etc
 // Find compatability table here: https://kangax.github.io/compat-table/es6/
 
 'use strict'
@@ -49,8 +50,8 @@ new Promise((resolve, reject)=>{
 // Webpack
 // Here's an example webpack.config.js
 
-var webpack = require('webpack');  
-module.exports = {  
+var webpack = require('webpack');
+module.exports = {
     entry: [
       'babel-polyfill',
       'webpack/hot/only-dev-server',
@@ -62,9 +63,9 @@ module.exports = {
     },
     module: {
         loaders: [
-            { 
-              test: /\.js$/, 
-              exclude: /node_modules/, 
+            {
+              test: /\.js$/,
+              exclude: /node_modules/,
               loader: 'babel-loader',
               query: {
                 plugins: ['transform-runtime'],
