@@ -116,8 +116,8 @@ let [drNo, fromRussia] = [1962, 1963];
 function announceBestBond(name="Sean Connery") {
   console.log("The best bond ever was ", name);
 }
-announceBestBond();
-announceBestBond("Pierce Brosnan");
+announceBestBond(); The best bond ever was Sean Connery
+announceBestBond("Pierce Brosnan"); The best bond ever was Pierce Brosnan
 ```
 
 ---
@@ -127,9 +127,9 @@ announceBestBond("Pierce Brosnan");
 function announceBest({agent="Sean Connery", villian="Goldfinger"}) {
   console.log(`The best bond ever was ${agent} and the villan was ${villian}`);
 }
-announceBest({});
-announceBest({villian: "Oddjob"});
-// announceBest() // cannot read property 'agent' of undefined
+announceBest({}); // The best bond ever was Sean Connery and the villan was Goldfinger
+announceBest({villian: "Oddjob"}); // The best bond ever was Sean Connery and the villan was Oddjob
+announceBest() // cannot read property 'agent' of undefined
 ```
 
 ---
@@ -140,7 +140,7 @@ announceBest({villian: "Oddjob"});
 function announceBest({agent="Sean Connery", villian="Goldfinger"} = {}) {
   console.log(`The best bond ever was ${agent} and the villan was ${villian}`);
 }
-announceBest();
+announceBest(); // The best bond ever was Sean Connery and the villan was Goldfinger
 
 ```
 
