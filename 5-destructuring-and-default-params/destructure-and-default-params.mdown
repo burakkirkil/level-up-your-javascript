@@ -116,8 +116,8 @@ let [drNo, fromRussia] = [1962, 1963];
 function announceBestBond(name="Sean Connery") {
   console.log("The best bond ever was ", name);
 }
-announceBestBond(); The best bond ever was Sean Connery
-announceBestBond("Pierce Brosnan"); The best bond ever was Pierce Brosnan
+announceBestBond(); // The best bond ever was Sean Connery
+announceBestBond("Pierce Brosnan"); // The best bond ever was Pierce Brosnan
 ```
 
 ---
