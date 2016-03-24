@@ -53,6 +53,7 @@ movie.get(goldenFun) // pew pew
 ### Alternative Creation
 
 `Map()` can take any iterable (array, generator)
+
 ```javascript
 let movie = new Map([['james', 'bond'], ['odd', 'job']]);
 movie.get('james') // bond
@@ -63,6 +64,7 @@ movie.get('james') // bond
 ### for...of
 
 `Map()` is iterable
+
 ```javascript
 let movie = new Map([['james', 'bond'], ['odd', 'job']]);
 for (var [key, value] of movie) {
