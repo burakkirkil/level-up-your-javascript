@@ -1,0 +1,104 @@
+# Object
+### Level Up Your JavaScript with ES6
+#### by Cody Barrus & Ryan Ewing
+
+---
+## Object
+### what?
+
+`Object` got some new and interesting methods.
+
+---
+## Object
+### Object vs {}
+
+* `Object.assign()`
+* `Object.is()`
+* `Object.getOwnPropertySymbols()`
+* `Object.setPrototypeOf()`
+
+---
+## Object
+### assign | how?
+
+```javascript
+Object.assign(target, ...sources)
+
+Can be used to clone and merge
+```
+
+---
+## Object
+### assign
+merge two objects
+
+```javascript
+let agents = Object.assign({ '007': 'James Bond' }, { '002': 'Bill Fairbanks' });
+console.log(agents); // { '004': 'James Bond', '002': 'Bill Fairbanks' }
+```
+
+---
+## Object
+### assign
+copy an object
+
+```javascript
+let agents = { '004': 'Aidan Flemmings', '002': 'Bill Fairbanks' };
+let goingToDie = Object.assign({}, agents);
+goingToDie['004'] = 'dead';
+goingToDie['002'] = 'dead';
+console.log(agents, goingToDie);
+// { '004': 'Aidan Flemmings', '002': 'Bill Fairbanks' }
+// { '004': 'dead', '002': 'dead' }
+```
+
+---
+## Mao
+### assign gotchas
+* Only works on enumerable properties and non-inherited properties
+* only one level deep
+
+## Object
+### assign shallow
+let movie = {agents: {bond: 'Sean Connery'}}
+let newMovie = Object.assign({}, movie);
+newMovie.agents.bond = 'Pierce Brosnan';
+
+console.log(movie.agents.bond) // Pierce Brosnan (oops)
+
+---
+## Object
+## is
+`Object.is()` works like `===`, with a few differences.
+
+```javascript
+-0 === +0
+// <- true
+Object.is(-0, +0)
+// <- false
+```
+
+---
+## Object
+### is
+
+```javascript
+NaN === NaN
+// <- false
+Object.is(NaN, NaN)
+// <- true
+```
+
+---
+## Object
+### getOwnPropertySymbols
+
+returns symbols on a property
+
+```javascript
+var agents = {
+  [Symbol('bond')]: 'james bond',
+  '005': 'Stuart Thomas',
+}
+console.log(agents.getOwnPropertySymbols()) // Symbol('bond');
+```
